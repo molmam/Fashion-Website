@@ -1,0 +1,138 @@
+/* 🌟 GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #000;
+      border-bottom: 1px solid gold;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: gold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: gold;
+    }
+
+/* 🌟 NEW ARRIVALS GRID */
+    .new-arrivals {
+      padding: 80px 60px;
+      text-align: center;
+      background-color: #111;
+    }
+
+    .new-arrivals h1 {
+      font-family: 'Playfair Display', serif;
+      color: gold;
+      font-size: 38px;
+      margin-bottom: 60px;
+    }
+
+    .arrival-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .arrival-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: 450px;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .arrival-item:hover {
+      transform: scale(1.03);
+    }
+
+    .arrival-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(85%);
+      transition: all 0.3s ease;
+    }
+
+    .arrival-item:hover img {
+      filter: brightness(70%);
+    }
+
+    .arrival-item h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* 🌟 FOOTER */
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid gold;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: gold;
+      font-weight: 500;
+    }
+
+    /* 🌟 RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+      .arrival-item h2 {
+        font-size: 22px;
+      }
+    }

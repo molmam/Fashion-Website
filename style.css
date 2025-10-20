@@ -1,0 +1,216 @@
+/* 🌟 GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 🌟 HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #000;
+      border-bottom: 1px solid gold;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: gold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    /* 🌟 HERO SLIDESHOW */
+    .hero {
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      color: gold;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      background-color: gold;
+      color: black;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: gold;
+      border: 1px solid gold;
+    }
+
+    /* 🌟 PRODUCTS SECTION */
+    .products {
+      padding: 80px 60px;
+      text-align: center;
+      background-color: #111;
+    }
+
+    .products h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: gold;
+      margin-bottom: 50px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+      background-color: #000;
+      border: 1px solid gold;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      font-size: 16px;
+      color: gold;
+      font-weight: bold;
+    }
+
+    /* 🌟 FOOTER */
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid gold;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: gold;
+      font-weight: 500;
+    }
+
+    /* 🌟 RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero-content h1 {
+        font-size: 40px;
+      }
+    }
+
+    
